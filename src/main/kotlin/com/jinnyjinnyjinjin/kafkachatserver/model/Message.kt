@@ -1,7 +1,13 @@
 package com.jinnyjinnyjinjin.kafkachatserver.model
 
-class Message(
+import java.time.LocalTime
+
+data class Message(
     val sender: String,
     val content: String,
-    val timestamp: String
-)
+    var timestamp: LocalTime?
+) {
+    fun setTimestamp() {
+        timestamp = LocalTime.now()
+    }
+}
