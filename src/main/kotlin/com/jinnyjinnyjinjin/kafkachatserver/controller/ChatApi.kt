@@ -36,4 +36,10 @@ class ChatApi(
             throw RuntimeException()
         }
     }
+
+    @MessageMapping("/send")
+    @SendTo("/topic/group")
+    fun broadcastGroupMessage(@Payload message: Message): Message {
+        return message
+    }
 }
