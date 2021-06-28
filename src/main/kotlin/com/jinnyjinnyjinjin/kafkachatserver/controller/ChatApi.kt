@@ -26,7 +26,6 @@ class ChatApi(
     fun sendMessage(
         @RequestBody message: Message,
     ) {
-        logger.info("SEND")
         message.setTimestamp()
         try {
             kafkaTemplate.send(KafkaConstants.KAFKA_TOPIC, message)
