@@ -1,4 +1,4 @@
-package com.jinnyjinnyjinjin.kafkachatserver.controller
+package com.jinnyjinnyjinjin.kafkachatserver.api
 
 import com.jinnyjinnyjinjin.kafkachatserver.constants.KafkaConstants
 import com.jinnyjinnyjinjin.kafkachatserver.model.Message
